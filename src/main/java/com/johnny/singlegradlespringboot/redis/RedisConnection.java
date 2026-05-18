@@ -16,7 +16,7 @@ public class RedisConnection {
 
    private static final ObjectMapper mapper = new ObjectMapper();
 
-//   @PostConstruct
+   @PostConstruct
    private void getRedisConnection() throws JsonProcessingException {
       User user = new User("Johnny", 27, "Citi");
       stringRedisTemplate.opsForValue().set("user",mapper.writeValueAsString(user));

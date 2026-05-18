@@ -1,6 +1,5 @@
 package com.johnny.singlegradlespringboot.utils;
 
-import com.johnny.singlegradlespringboot.service.UserService;
 
 import java.util.*;
 import java.util.concurrent.CompletableFuture;

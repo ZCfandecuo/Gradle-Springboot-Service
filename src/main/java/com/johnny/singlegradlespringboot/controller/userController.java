@@ -10,7 +10,6 @@ import jakarta.annotation.Resource;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Map;
 
 
 @RestController
@@ -37,7 +36,7 @@ public class userController {
 
     @GetMapping("/get/user")
     public ResponseEntity<String> getUser(@RequestParam("id") String user) {
-        return ResponseEntity.ok(redisConnection.getValue(user));
+        return ResponseEntity.ok(redisTemplateConfig.getValue(user));
     }
 
     @GetMapping("/get/map")
