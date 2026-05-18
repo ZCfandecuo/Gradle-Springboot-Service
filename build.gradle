@@ -1,0 +1,52 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.1.1'
+	id 'io.spring.dependency-management' version '1.1.0'
+}
+
+group = 'com.johnny'
+version = '1.0.0'
+sourceCompatibility = '17'
+
+repositories {
+	mavenCentral()
+}
+jar.enabled = true
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.yaml:snakeyaml:2.0'
+	implementation 'com.squareup.okhttp3:okhttp:5.0.0-alpha.10'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa:3.0.4'
+	implementation 'com.mysql:mysql-connector-j:8.0.31'
+	implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+	implementation 'com.google.code.gson:gson:2.10'
+	implementation 'org.apache.commons:commons-pool2'
+	implementation 'org.apache.logging.log4j:log4j-core:2.20.0'
+
+	testImplementation group: 'junit', name: 'junit', version: '4.13.2'
+
+}
+
+//ext {
+//	newName="Jessica"
+//}
+//def running = {String it->println(it)}
+////running("123")
+//tasks.register('output') {
+//	running(name)
+//}
+//def name="Johnny"
+//
+//output.doFirst {
+//	println("This should do first")
+//}
+//output{
+//	println("Executing task: "+name)
+//}
+//output.doLast {
+//	println("This should do Last")
+//}
+//output.configure {
+//
+//	println(name)
+//}
